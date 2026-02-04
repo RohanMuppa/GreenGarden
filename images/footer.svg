@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="leafGradF" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4CAF50"/>
+      <stop offset="100%" style="stop-color:#2E7D32"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Leaf -->
+  <path d="M50 10 Q80 30 70 60 Q60 80 50 90 Q40 80 30 60 Q20 30 50 10" fill="url(#leafGradF)"/>
+
+  <!-- Vein -->
+  <path d="M50 15 Q50 50 50 85" stroke="#1B5E20" stroke-width="2" fill="none"/>
+  <path d="M50 35 Q60 40 65 45" stroke="#1B5E20" stroke-width="1" fill="none"/>
+  <path d="M50 35 Q40 40 35 45" stroke="#1B5E20" stroke-width="1" fill="none"/>
+  <path d="M50 50 Q62 55 68 58" stroke="#1B5E20" stroke-width="1" fill="none"/>
+  <path d="M50 50 Q38 55 32 58" stroke="#1B5E20" stroke-width="1" fill="none"/>
+  <path d="M50 65 Q58 68 62 70" stroke="#1B5E20" stroke-width="1" fill="none"/>
+  <path d="M50 65 Q42 68 38 70" stroke="#1B5E20" stroke-width="1" fill="none"/>
+</svg>

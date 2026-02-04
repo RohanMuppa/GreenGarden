@@ -1,37 +1,36 @@
 # GreenGarden
 
-> **IB Computer Science Internal Assessment (IA) Project**
-> *IB Computer Science SL | March 2023*
+<p align="center">
+  <img src="images/logo.svg" alt="GreenGarden Logo" width="200"/>
+</p>
 
-A JavaFX desktop application for sustainable garden planning that helps users design eco-friendly gardens with personalized plant recommendations, environmental impact reports, and maintenance schedules.
+<p align="center">
+  <strong>IB Computer Science Internal Assessment (IA) Project</strong><br>
+  <em>IB Computer Science SL | March 2023</em>
+</p>
+
+<p align="center">
+  <a href="#features">Features</a> •
+  <a href="#screenshots">Screenshots</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#usage">Usage</a> •
+  <a href="#documentation">Documentation</a>
+</p>
 
 ---
 
-## Table of Contents
-
-- [About the Project](#about-the-project)
-- [The Problem](#the-problem)
-- [The Solution](#the-solution)
-- [Features](#features)
-- [Screenshots](#screenshots)
-- [Technical Architecture](#technical-architecture)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Success Criteria](#success-criteria)
-- [Documentation](#documentation)
-- [Future Development](#future-development)
-- [License](#license)
+A JavaFX desktop application for **sustainable garden planning** that helps users design eco-friendly gardens with personalized plant recommendations, environmental impact reports, and maintenance schedules.
 
 ---
 
 ## About the Project
 
-**GreenGarden** was developed as an IB Computer Science Internal Assessment (IA) project to address real-world sustainability challenges in home gardening.
+**GreenGarden** was developed as an **IB Computer Science Internal Assessment (IA)** project to address real-world sustainability challenges in home gardening.
 
 | Role | Name |
 |------|------|
 | **Developer** | Rohan Muppa |
-| **Client** | Latha Battina |
+| **Client** | Latha Muppa |
 | **Advisor** | Peter Donaldson |
 | **Instructor** | Ms. Nishiwaki |
 
@@ -39,25 +38,34 @@ A JavaFX desktop application for sustainable garden planning that helps users de
 
 ## The Problem
 
-The client, Latha Battina, is a recreational gardener who faces challenges managing her backyard garden:
+The client, **Latha Muppa**, is a recreational gardener who faces challenges managing her backyard garden:
 
-- **Limited knowledge** about sustainable gardening practices
-- **Difficulty identifying plants** suitable for local climate and conditions
-- **No existing tool** to manage the garden efficiently and sustainably
-- **Desire for organic produce** with minimal environmental impact
-- **Need for guidance** on garden planning and maintenance
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                        CLIENT CHALLENGES                            │
+├─────────────────────────────────────────────────────────────────────┤
+│  😕 Limited knowledge about sustainable gardening practices         │
+│  🌱 Difficulty identifying plants suitable for local climate        │
+│  🔧 No existing tool to manage garden efficiently                   │
+│  🌿 Desire for organic produce with minimal environmental impact    │
+│  📅 Need for guidance on garden planning and maintenance            │
+└─────────────────────────────────────────────────────────────────────┘
+```
 
 ---
 
 ## The Solution
 
-GreenGarden is a sustainable garden planning program that enables users to **plan, track, and improve** their sustainable gardens by:
+GreenGarden enables users to **plan, track, and improve** their sustainable gardens:
 
-1. Accepting user inputs about local climate and garden conditions
-2. Recommending plants native to the area to promote biodiversity
-3. Creating lists of tools and supplies needed for maintenance
-4. Reporting potential environmental impact of the garden
-5. Generating personalized maintenance schedules
+```mermaid
+flowchart LR
+    A[👤 User Input] --> B[🌱 GreenGarden]
+    B --> C[📋 Plant Recommendations]
+    B --> D[🌍 Environmental Report]
+    B --> E[📅 Maintenance Schedule]
+    B --> F[💡 Garden Tips]
+```
 
 ---
 
@@ -67,65 +75,131 @@ GreenGarden is a sustainable garden planning program that enables users to **pla
 
 | Feature | Description |
 |---------|-------------|
-| **Plant Recommendations** | Filters plants from a database based on zip code, sun exposure, maintenance level, and budget |
-| **Environmental Report** | Calculates CO2 sequestered and water saved compared to traditional gardens |
-| **Budget Management** | Ensures total plant cost stays within user-specified budget |
-| **Compatibility Check** | Verifies new plants are compatible with existing garden plants |
-| **Maintenance Schedule** | Generates watering and care schedules based on maintenance preference |
-| **Garden Tips** | Provides specific recommendations based on plant types (fertilizers, pest control, etc.) |
+| 🌱 **Plant Recommendations** | Filters plants based on zip code, sun exposure, maintenance level, and budget |
+| 🌍 **Environmental Report** | Calculates CO2 sequestered and water saved vs. traditional gardens |
+| 💰 **Budget Management** | Ensures total plant cost stays within budget |
+| ✅ **Compatibility Check** | Verifies new plants work with existing garden plants |
+| 📅 **Maintenance Schedule** | Generates watering and care schedules |
+| 💡 **Garden Tips** | Provides specific recommendations based on plant types |
 
 ### Input Parameters
 
-- **Garden Size** (square meters)
-- **Zip Code** (for location-based filtering)
-- **Sun Exposure** (Less than 4 hours, 4-6 hours, 6-8 hours, More than 8 hours)
-- **Maintenance Level** (Low, Moderate, High)
-- **Budget** (USD)
-- **Existing Plant Types** (15 categories including Annuals, Perennials, Herbs, Vegetables, etc.)
+```mermaid
+mindmap
+  root((GreenGarden<br>Inputs))
+    Garden Size
+      Square meters
+    Location
+      Zip Code
+    Sun Exposure
+      Less than 4 hours
+      4-6 hours
+      6-8 hours
+      More than 8 hours
+    Maintenance
+      Low
+      Moderate
+      High
+    Budget
+      USD
+    Existing Plants
+      15 categories
+```
 
 ### Supported Plant Categories
 
-```
-Annuals | Perennials | Bulbs | Shrubs | Trees | Climbers
-Herbs | Vegetables | Fruits | Grasses | Succulents | Cacti
-Ferns | Palms | Ornamental Grasses
-```
+<table>
+<tr>
+<td>🌸 Annuals</td>
+<td>🌺 Perennials</td>
+<td>🌷 Bulbs</td>
+<td>🌳 Shrubs</td>
+<td>🌲 Trees</td>
+</tr>
+<tr>
+<td>🍃 Climbers</td>
+<td>🌿 Herbs</td>
+<td>🥬 Vegetables</td>
+<td>🍓 Fruits</td>
+<td>🌾 Grasses</td>
+</tr>
+<tr>
+<td>🪴 Succulents</td>
+<td>🌵 Cacti</td>
+<td>☘️ Ferns</td>
+<td>🌴 Palms</td>
+<td>🌾 Ornamental Grasses</td>
+</tr>
+</table>
 
 ---
 
 ## Screenshots
 
-### Main Application Interface
+### Application Interface
 
-The application uses a clean GridPane layout with intuitive input fields:
+<p align="center">
+  <img src="images/ui-main.svg" alt="Main Application Interface" width="400"/>
+</p>
 
-![Application UI](Documentation/Crit_C_Development.pdf)
+*Main input form with garden parameters and plant type selection*
 
-*See `Documentation/Crit_C_Development.pdf` (Page 2) for UI screenshots*
+| Component | Description |
+|-----------|-------------|
+| Text Fields | Garden size, zip code, budget |
+| Dropdowns | Sun exposure, maintenance level |
+| Checkbox List | Existing plant types (15 options) |
+| Submit Button | Generate recommendations |
 
-**UI Components:**
-- Text fields for garden size, zip code, and budget
-- Dropdown menus for sun exposure and maintenance level
-- Checkbox list for selecting existing plant types
-- Submit button to generate recommendations
+### Input Validation
 
-### Output Reports
+<p align="center">
+  <img src="images/ui-validation.svg" alt="Input Validation" width="600"/>
+</p>
 
-The application generates three sequential reports:
+*Error handling for invalid inputs with user-friendly alerts*
 
-1. **Environmental Report**
-   - Total cost of recommended plants
-   - CO2 sequestered (kg)
-   - Water saved (gallons)
-   - Water savings percentage
-   - Personalized garden recommendations
+### Sample Output Reports
 
-2. **Maintenance Schedule**
-   - Watering frequency per month
-   - Maintenance days required
+#### Environmental Report
+```
+┌─────────────────────────────────────────┐
+│         ENVIRONMENTAL REPORT            │
+├─────────────────────────────────────────┤
+│  Total Cost of Plants:    $127.45       │
+│  CO2 Sequestered:         15.20 kg      │
+│  Water Saved:             2,450 gallons │
+│  Water Savings:           15.3%         │
+├─────────────────────────────────────────┤
+│  RECOMMENDATIONS:                       │
+│  • Use organic fertilizer for annuals   │
+│  • Collect rainwater for ferns          │
+│  • Use mulch around trees and shrubs    │
+└─────────────────────────────────────────┘
+```
 
-3. **Plant List**
-   - Complete list of recommended plants with quantities
+#### Maintenance Schedule
+```
+┌─────────────────────────────────────────┐
+│         MAINTENANCE SCHEDULE            │
+├─────────────────────────────────────────┤
+│  Water plants: 8 times per month        │
+│  Maintenance days: 3 day(s) per month   │
+└─────────────────────────────────────────┘
+```
+
+#### Plant List
+```
+┌─────────────────────────────────────────┐
+│         PLANTS IN YOUR GARDEN           │
+├─────────────────────────────────────────┤
+│  • Lavender (x3)                        │
+│  • Tomato (x5)                          │
+│  • Basil (x4)                           │
+│  • Marigold (x6)                        │
+│  • Rosemary (x2)                        │
+└─────────────────────────────────────────┘
+```
 
 ---
 
@@ -133,135 +207,186 @@ The application generates three sequential reports:
 
 ### Technology Stack
 
+<p align="center">
+
 | Component | Technology |
 |-----------|------------|
-| Language | Java |
-| UI Framework | JavaFX |
-| IDE | IntelliJ IDEA |
-| Data Storage | CSV File |
+| **Language** | ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white) |
+| **UI Framework** | ![JavaFX](https://img.shields.io/badge/JavaFX-007396?style=flat&logo=java&logoColor=white) |
+| **IDE** | ![IntelliJ](https://img.shields.io/badge/IntelliJ_IDEA-000000?style=flat&logo=intellij-idea&logoColor=white) |
+| **Data Storage** | CSV File |
+
+</p>
 
 ### Project Structure
 
 ```
 GreenGarden/
-├── Product/
-│   ├── Main.java           # JavaFX application entry point & UI
-│   ├── Garden.java         # Core garden logic and algorithms
-│   ├── Plant.java          # Plant data model
-│   ├── WaterCalculator.java # Water usage calculations
-│   └── Plants.csv          # Plant database (required)
-└── Documentation/
-    ├── Crit_A_Planning.pdf
-    ├── Crit_B_Design.pdf
-    ├── Crit_B_Record_Of_Tasks.pdf
-    ├── Crit_C_Development.pdf
-    ├── Crit_E_Evaluation.pdf
-    └── Appendix.pdf
+├── 📁 Product/
+│   ├── 📄 Main.java            # JavaFX application entry point & UI
+│   ├── 📄 Garden.java          # Core garden logic and algorithms
+│   ├── 📄 Plant.java           # Plant data model
+│   ├── 📄 WaterCalculator.java # Water usage calculations
+│   └── 📄 Plants.csv           # Plant database (required)
+├── 📁 Documentation/
+│   ├── 📕 Crit_A_Planning.pdf
+│   ├── 📗 Crit_B_Design.pdf
+│   ├── 📘 Crit_B_Record_Of_Tasks.pdf
+│   ├── 📙 Crit_C_Development.pdf
+│   ├── 📓 Crit_E_Evaluation.pdf
+│   └── 📔 Appendix.pdf
+├── 📁 images/
+└── 📄 README.md
 ```
 
 ### Class Diagram
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                            Main                                  │
-│  (JavaFX Application)                                           │
-├─────────────────────────────────────────────────────────────────┤
-│  + main(args: String[]): void                                   │
-│  + start(primaryStage: Stage): void                             │
-│  - showAlert(message: String, type: AlertType): void            │
-└─────────────────────────────────────────────────────────────────┘
-                              │
-                              │ creates
-                              ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                           Garden                                 │
-├─────────────────────────────────────────────────────────────────┤
-│  - size: int                                                    │
-│  - zipCode: int                                                 │
-│  - sunExposure: int                                             │
-│  - budget: int                                                  │
-│  - maintenanceLevel: int                                        │
-│  - existingPlantTypes: ObservableList<String>                   │
-│  + newPlants: ArrayList<Plant>                                  │
-├─────────────────────────────────────────────────────────────────┤
-│  + selectPlants(): void                                         │
-│  + isCompatibleWith(plant, existing, filtered): boolean         │
-│  + readPlantsFromCsvFile(path: String): List<Plant>             │
-│  + generateReport(): String                                     │
-│  + getTotalCostOfPlants(): double                               │
-│  + getCO2Sequestered(): double                                  │
-│  + getGardenRecommendations(): String                           │
-│  + createMaintenanceSchedule(level: int): String                │
-│  + listPlantNames(): String                                     │
-│  + getNewPlants(): List<Plant>                                  │
-└─────────────────────────────────────────────────────────────────┘
-                              │
-              ┌───────────────┴───────────────┐
-              │                               │
-              ▼                               ▼
-┌──────────────────────────┐    ┌──────────────────────────┐
-│          Plant           │    │     WaterCalculator      │
-├──────────────────────────┤    ├──────────────────────────┤
-│  - name: String          │    │  - sunExposure: int      │
-│  - waterDemand: int      │    │  - gardenSize: int       │
-│  - sunExposure: int      │    │  - waterUsage: double    │
-│  - zipcode: int          │    │  - regularGardenWater:   │
-│  - cost: double          │    │      Usage: double       │
-│  - type: String          │    ├──────────────────────────┤
-├──────────────────────────┤    │  + calculateWaterUsage() │
-│  + getWaterDemand(): int │    │  + calculateWaterSavings │
-│  + getZipcode(): int     │    │      Percent(): double   │
-│  + getSunExposure(): int │    │  + calculateWaterSavings │
-│  + getType(): String     │    │      Gallons(): double   │
-│  + getCost(): double     │    └──────────────────────────┘
-│  + getName(): String     │
-└──────────────────────────┘
-```
+```mermaid
+classDiagram
+    class Main {
+        +main(args: String[]) void
+        +start(primaryStage: Stage) void
+        -showAlert(message: String, type: AlertType) void
+    }
 
-### Key Algorithms
+    class Garden {
+        -int size
+        -int zipCode
+        -int sunExposure
+        -int budget
+        -int maintenanceLevel
+        -ObservableList~String~ existingPlantTypes
+        +ArrayList~Plant~ newPlants
+        +selectPlants() void
+        +isCompatibleWith(plant, existing, filtered) boolean
+        +readPlantsFromCsvFile(path: String) List~Plant~
+        +generateReport() String
+        +getTotalCostOfPlants() double
+        +getCO2Sequestered() double
+        +getGardenRecommendations() String
+        +createMaintenanceSchedule(level: int) String
+        +listPlantNames() String
+        +getNewPlants() List~Plant~
+    }
 
-#### 1. Plant Selection Algorithm (`selectPlants()`)
+    class Plant {
+        -String name
+        -int waterDemand
+        -int sunExposure
+        -int zipcode
+        -double cost
+        -String type
+        +getWaterDemand() int
+        +getZipcode() int
+        +getSunExposure() int
+        +getType() String
+        +getCost() double
+        +getName() String
+    }
 
-```
-START
-├── Load plants from CSV database
-├── FOR each plant in database:
-│   ├── Filter by zip code (within 500 range)
-│   ├── Check compatibility with existing plants
-│   ├── Filter by sun exposure requirements
-│   ├── Filter by maintenance/water demand
-│   ├── Add to recommendations if passes all filters
-│   └── Remove if exceeds budget
-└── END
+    class WaterCalculator {
+        -int sunExposure
+        -int gardenSize
+        -double waterUsage
+        -double regularGardenWaterUsage
+        +calculateWaterUsage() double
+        +calculateWaterSavingsPercent() double
+        +calculateWaterSavingsGallons() double
+    }
+
+    Main --> Garden : creates
+    Garden --> Plant : contains
+    Garden --> WaterCalculator : uses
 ```
 
-#### 2. Plant Compatibility Check (`isCompatibleWith()`)
+### Plant Selection Algorithm
 
-Uses a **HashMap** to map general plant categories to specific compatible plant types:
+```mermaid
+flowchart TD
+    A[Start] --> B[Load plants from CSV]
+    B --> C{For each plant}
+    C --> D{Within zip code range?}
+    D -->|No| C
+    D -->|Yes| E{Compatible with existing?}
+    E -->|No| C
+    E -->|Yes| F{Sun exposure OK?}
+    F -->|No| C
+    F -->|Yes| G{Maintenance level OK?}
+    G -->|No| C
+    G -->|Yes| H[Add to recommendations]
+    H --> I{Over budget?}
+    I -->|Yes| J[Remove plant]
+    I -->|No| C
+    J --> C
+    C -->|Done| K[Return plant list]
+    K --> L[End]
 
-```java
-HashMap<String, List<String>> compatibility = new HashMap<>();
-compatibility.put("Annuals", List.of("Petunia", "Marigold", "Zinnia"));
-compatibility.put("Perennials", List.of("Hosta", "Lavender", "Daylily"));
-// ... etc.
+    style A fill:#90EE90
+    style L fill:#FFB6C1
+    style H fill:#87CEEB
 ```
 
-### Data Structures Used
+### Data Flow
 
-| Structure | Purpose |
-|-----------|---------|
-| **HashMap** | Plant compatibility mapping, plant type counting |
-| **ArrayList** | Storing recommended plants (dynamic sizing) |
-| **ObservableList** | JavaFX UI binding for existing plant types |
-| **StringBuilder** | Efficient report generation |
+```mermaid
+flowchart LR
+    subgraph Input
+        A[User Form]
+        B[Plants.csv]
+    end
 
-### Techniques Demonstrated
+    subgraph Processing
+        C[Garden Class]
+        D[selectPlants]
+        E[WaterCalculator]
+        F[generateReport]
+    end
 
-- **JavaFX GridPanes and Labels** - Structured UI layout
-- **Try-Catch Blocks** - Input validation and error handling
-- **File I/O** - CSV parsing with BufferedReader
-- **Encapsulation** - Private fields with public getters
-- **Linear Search** - Plant filtering algorithm
+    subgraph Output
+        G[Environmental Report]
+        H[Maintenance Schedule]
+        I[Plant List]
+    end
+
+    A --> C
+    B --> D
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    F --> H
+    F --> I
+```
+
+### Data Structures
+
+```mermaid
+graph TD
+    subgraph HashMap
+        A[Plant Compatibility]
+        B["Annuals → [Petunia, Marigold, Zinnia]"]
+        C["Perennials → [Hosta, Lavender, Daylily]"]
+    end
+
+    subgraph ArrayList
+        D[newPlants]
+        E[Plant 1]
+        F[Plant 2]
+        G[Plant n...]
+    end
+
+    subgraph ObservableList
+        H[existingPlantTypes]
+        I[UI Binding]
+    end
+
+    A --> B
+    A --> C
+    D --> E
+    D --> F
+    D --> G
+    H --> I
+```
 
 ---
 
@@ -269,187 +394,207 @@ compatibility.put("Perennials", List.of("Hosta", "Lavender", "Daylily"));
 
 ### Prerequisites
 
-- **Java JDK 11+** (with JavaFX support)
-- **JavaFX SDK** (if not bundled with JDK)
-- **IntelliJ IDEA** (recommended) or any Java IDE
+- **Java JDK 11+** with JavaFX support
+- **JavaFX SDK** (if not bundled)
+- **IntelliJ IDEA** (recommended)
 
-### Step 1: Clone the Repository
+### Quick Start
 
 ```bash
-git clone https://github.com/yourusername/GreenGarden.git
+# 1. Clone the repository
+git clone https://github.com/RohanMuppa/GreenGarden.git
 cd GreenGarden
+
+# 2. Set up JavaFX (if needed)
+# Download from https://openjfx.io/
+
+# 3. Configure Plants.csv path in Garden.java (line 36)
+
+# 4. Run with JavaFX modules
+java --module-path /path/to/javafx-sdk/lib \
+     --add-modules javafx.controls \
+     -cp Product Main
 ```
 
-### Step 2: Set Up JavaFX
+### Detailed Setup
 
-#### Option A: Using JDK with bundled JavaFX (e.g., Liberica JDK Full, Azul Zulu JDK FX)
+<details>
+<summary><strong>Option A: JDK with bundled JavaFX</strong></summary>
 
-1. Download and install a JDK with JavaFX included
-2. Set `JAVA_HOME` to the JDK installation directory
+1. Download Liberica JDK Full or Azul Zulu JDK FX
+2. Set `JAVA_HOME` to installation directory
+3. Run directly without additional configuration
 
-#### Option B: Separate JavaFX SDK
+</details>
+
+<details>
+<summary><strong>Option B: Separate JavaFX SDK</strong></summary>
 
 1. Download JavaFX SDK from [openjfx.io](https://openjfx.io/)
-2. Extract to a known location (e.g., `/path/to/javafx-sdk`)
-3. Add VM options when running:
-
-```bash
---module-path /path/to/javafx-sdk/lib --add-modules javafx.controls,javafx.fxml
+2. Extract to known location
+3. Add VM options:
+```
+--module-path /path/to/javafx-sdk/lib --add-modules javafx.controls
 ```
 
-### Step 3: Configure the Plant Database
+</details>
 
-1. Create a `Plants.csv` file with the following format:
+<details>
+<summary><strong>IntelliJ IDEA Setup</strong></summary>
+
+1. Open project in IntelliJ
+2. File → Project Structure → Project → Set SDK
+3. File → Project Structure → Libraries → Add JavaFX
+4. Run → Edit Configurations → VM Options:
+```
+--module-path /path/to/javafx-sdk/lib --add-modules javafx.controls
+```
+5. Run `Main.java`
+
+</details>
+
+### Configure Plant Database
+
+Create `Plants.csv` with this format:
 
 ```csv
 ID,Name,SunNeeded,WaterNeeded,Cost,Zipcode,Type
 1,Petunia,2,1,5.99,12345,Annuals
 2,Lavender,3,1,8.99,12345,Perennials
-...
+3,Tomato,4,2,3.99,12345,Vegetables
 ```
-
-2. Update the file path in `Garden.java`:
-
-```java
-// Line 36 in Garden.java - Update this path:
-List<Plant> plantsToFilter = readPlantsFromCsvFile("/your/path/to/Plants.csv");
-```
-
-### Step 4: Compile and Run
-
-#### Using Command Line:
-
-```bash
-cd Product
-javac --module-path /path/to/javafx-sdk/lib --add-modules javafx.controls *.java
-java --module-path /path/to/javafx-sdk/lib --add-modules javafx.controls Main
-```
-
-#### Using IntelliJ IDEA:
-
-1. Open the project in IntelliJ
-2. Configure Project SDK (File > Project Structure > Project)
-3. Add JavaFX library (File > Project Structure > Libraries)
-4. Set VM options in Run Configuration:
-   ```
-   --module-path /path/to/javafx-sdk/lib --add-modules javafx.controls
-   ```
-5. Run `Main.java`
 
 ---
 
 ## Usage
 
-1. **Launch the application** - Run `Main.java`
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant M as Main (UI)
+    participant G as Garden
+    participant W as WaterCalculator
 
-2. **Enter garden details:**
-   - Garden size in square meters
-   - Your zip code
-   - Select sun exposure level
-   - Choose maintenance preference
-   - Enter your budget in USD
-   - Check existing plant types in your garden
+    U->>M: Enter garden details
+    U->>M: Click Submit
+    M->>G: Create Garden object
+    G->>G: selectPlants()
+    G->>W: Calculate water usage
+    W-->>G: Return calculations
+    G->>G: generateReport()
+    G-->>M: Return report
+    M-->>U: Display Environmental Report
+    M-->>U: Display Maintenance Schedule
+    M-->>U: Display Plant List
+```
 
-3. **Click Submit** to generate recommendations
+### Step-by-Step
 
-4. **View results** in sequential popup dialogs:
-   - Environmental Report (CO2, water savings, tips)
-   - Maintenance Schedule
-   - Recommended Plant List
+1. **Launch** - Run `Main.java`
+2. **Enter Details**
+   - Garden size (sq meters)
+   - Zip code
+   - Sun exposure level
+   - Maintenance preference
+   - Budget (USD)
+   - Check existing plant types
+3. **Submit** - Click button to generate
+4. **View Results** - Three sequential dialogs
 
 ---
 
 ## Success Criteria
 
-All success criteria from the IB IA were met and validated by the client:
+All IB IA success criteria were met:
 
-| Criteria | Status | Evidence |
-|----------|--------|----------|
-| Handle multiple inputs (maintenance, sun exposure, budget, zip code) | ✅ Met | Client confirmed ability to input all parameters |
-| Generate plants for each garden | ✅ Met | Program generates customized shopping list |
-| Recommend at least 1 native plant | ✅ Met | Plants filtered within zip code radius |
-| Generate environmental report (CO2, water saved) | ✅ Met | Report displays all metrics |
-| Recommend specific tips based on plant needs | ✅ Met | Dynamic recommendations based on plant types |
-| Predict 10%+ water reduction | ✅ Met | Client reported ~15% water savings prediction |
-| Provide watering schedule | ✅ Met | Monthly maintenance schedule generated |
-| Total cost under budget | ✅ Met | Budget constraint enforced in algorithm |
+| # | Criteria | Status |
+|---|----------|--------|
+| 1 | Handle multiple inputs (maintenance, sun, budget, zip) | ✅ |
+| 2 | Generate plants for each garden | ✅ |
+| 3 | Recommend at least 1 native plant | ✅ |
+| 4 | Generate environmental report (CO2, water) | ✅ |
+| 5 | Recommend tips based on plant needs | ✅ |
+| 6 | Predict 10%+ water reduction | ✅ |
+| 7 | Provide watering schedule | ✅ |
+| 8 | Total cost under budget | ✅ |
+
+> *"I believe that the application predicted about 15% reduction in water usage"* — Client Feedback
 
 ---
 
 ## Documentation
 
-Complete IB IA documentation is available in the `Documentation/` folder:
-
-| Document | Description |
-|----------|-------------|
-| `Crit_A_Planning.pdf` | Problem definition, client needs, proposed solution, success criteria |
-| `Crit_B_Design.pdf` | Flowcharts, UML diagrams, UI flow, test plans |
-| `Crit_B_Record_Of_Tasks.pdf` | Development timeline with 57 documented tasks |
-| `Crit_C_Development.pdf` | Technical implementation, code explanations, algorithms |
-| `Crit_E_Evaluation.pdf` | Success criteria evaluation, client feedback, future developments |
-| `Appendix.pdf` | Supporting materials and references |
+| Document | Description | View |
+|----------|-------------|------|
+| **Criterion A** | Planning, problem definition, success criteria | [PDF](Documentation/Crit_%20A_Planning.pdf) |
+| **Criterion B** | Design, flowcharts, UML, test plans | [PDF](Documentation/Crit_B_Design.pdf) |
+| **Record of Tasks** | 57 documented development tasks | [PDF](Documentation/Crit_B_Record_Of_Tasks.pdf) |
+| **Criterion C** | Development, code explanations | [PDF](Documentation/Crit_C_Development.pdf) |
+| **Criterion E** | Evaluation, client feedback | [PDF](Documentation/Crit_E_Evaluation.pdf) |
+| **Appendix** | Supporting materials | [PDF](Documentation/Appendix.pdf) |
 
 ---
 
 ## Future Development
 
-Based on client feedback, the following enhancements are planned:
+Based on client feedback:
 
-1. **Detailed 7-day maintenance schedule** - Provide specific daily tasks instead of monthly overview
-
-2. **Short-term environmental metrics** - Add monthly/yearly data in addition to long-term (20+ years) projections
-
-3. **Enhanced plant database** - Expand CSV with more plants and regional data
-
-4. **Data persistence** - Save garden configurations for future sessions
-
-5. **API integration** - Connect to plant databases for real-time information
+- [ ] **7-day detailed maintenance schedule** with specific daily tasks
+- [ ] **Monthly/yearly environmental metrics** (not just long-term)
+- [ ] **Expanded plant database** with more regional data
+- [ ] **Data persistence** to save garden configurations
+- [ ] **API integration** for real-time plant information
 
 ---
 
-## Technical Notes
-
-### CSV File Format
-
-The plant database CSV requires the following columns:
-
-| Column | Type | Description |
-|--------|------|-------------|
-| ID | int | Unique identifier |
-| Name | String | Plant name |
-| SunNeeded | int | Sun exposure requirement (1-4) |
-| WaterNeeded | int | Water demand level (1-3) |
-| Cost | double | Price in USD |
-| Zipcode | int | Native region zip code |
-| Type | String | Plant category |
+## Technical Reference
 
 ### Water Calculation Formula
 
 ```
 Water Usage = 25 × (sunExposureFactor + gardenSize × gardenSizeFactor × 2.31)
 
-Where:
-- sunExposureFactor: 0.6 to 1.4 based on sun hours
-- gardenSizeFactor: 1.0 to 1.5 based on garden size
-- Regular garden baseline: 323 L/m² × 0.264172 (liters to gallons)
+Sun Exposure Factor:
+  > 8 hours  → 1.4
+  > 6 hours  → 1.2
+  > 4 hours  → 1.0
+  > 2 hours  → 0.8
+  ≤ 2 hours  → 0.6
+
+Garden Size Factor:
+  > 1000 m²  → 1.5
+  > 500 m²   → 1.2
+  > 250 m²   → 1.1
+  > 100 m²   → 1.05
+  ≤ 100 m²   → 1.0
 ```
+
+### CSV Schema
+
+| Column | Type | Description |
+|--------|------|-------------|
+| ID | int | Unique identifier |
+| Name | String | Plant name |
+| SunNeeded | int | Sun requirement (1-4) |
+| WaterNeeded | int | Water demand (1-3) |
+| Cost | double | Price in USD |
+| Zipcode | int | Native region |
+| Type | String | Plant category |
 
 ---
 
 ## Acknowledgments
 
-- **Client (Latha Battina)** - For providing requirements and feedback
-- **Advisor (Peter Donaldson)** - For technical guidance
-- **Ms. Nishiwaki** - IB Computer Science instructor
-
----
-
-## License
-
-This project was created for educational purposes as part of the IB Diploma Programme Computer Science Internal Assessment.
+- **Latha Muppa** — Client, requirements and feedback
+- **Peter Donaldson** — Technical advisor
+- **Ms. Nishiwaki** — IB Computer Science instructor
 
 ---
 
 <p align="center">
-  <i>Developed with sustainability in mind</i>
+  <img src="images/footer.svg" alt="GreenGarden" width="80"/>
+  <br>
+  <em>Developed with sustainability in mind</em>
+  <br><br>
+  <strong>IB Computer Science Internal Assessment</strong>
 </p>
