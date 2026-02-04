@@ -139,7 +139,7 @@ mindmap
 ### Application Interface
 
 <p align="center">
-  <img src="images/ui-main.svg" alt="Main Application Interface" width="400"/>
+  <img src="images/screenshot-main-ui.png" alt="Main Application Interface" width="450"/>
 </p>
 
 *Main input form with garden parameters and plant type selection*
@@ -154,10 +154,26 @@ mindmap
 ### Input Validation
 
 <p align="center">
-  <img src="images/ui-validation.svg" alt="Input Validation" width="600"/>
+  <img src="images/screenshot-error-alert.png" alt="Input Validation Alert" width="500"/>
 </p>
 
 *Error handling for invalid inputs with user-friendly alerts*
+
+### Algorithm Flowchart
+
+<p align="center">
+  <img src="images/screenshot-flowchart.png" alt="Plant Selection Flowchart" width="250"/>
+</p>
+
+*selectPlants() algorithm flowchart from documentation*
+
+### Code Sample
+
+<p align="center">
+  <img src="images/screenshot-code-alert.png" alt="showAlert Code" width="500"/>
+</p>
+
+*showAlert() method implementation for displaying messages*
 
 ### Sample Output Reports
 
