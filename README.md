@@ -27,18 +27,18 @@ A JavaFX desktop application for **sustainable garden planning** that helps user
 
 **GreenGarden** was developed as an **IB Computer Science Internal Assessment (IA)** project to address real-world sustainability challenges in home gardening.
 
-| Role | Name |
-|------|------|
-| **Developer** | Rohan Muppa |
-| **Client** | Latha Muppa |
-| **Advisor** | Peter Donaldson |
-| **Instructor** | Ms. Nishiwaki |
+| Role           | Name              |
+| -------------- | ----------------- |
+| **Developer**  | [Student Name]    |
+| **Client**     | [Client Name]     |
+| **Advisor**    | [Advisor Name]    |
+| **Instructor** | [Instructor Name] |
 
 ---
 
 ## The Problem
 
-The client, **Latha Muppa**, is a recreational gardener who faces challenges managing her backyard garden:
+The client, **[Client Name]**, is a recreational gardener who faces challenges managing her backyard garden:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
@@ -73,14 +73,14 @@ flowchart LR
 
 ### Core Functionality
 
-| Feature | Description |
-|---------|-------------|
+| Feature                     | Description                                                                   |
+| --------------------------- | ----------------------------------------------------------------------------- |
 | 🌱 **Plant Recommendations** | Filters plants based on zip code, sun exposure, maintenance level, and budget |
-| 🌍 **Environmental Report** | Calculates CO2 sequestered and water saved vs. traditional gardens |
-| 💰 **Budget Management** | Ensures total plant cost stays within budget |
-| ✅ **Compatibility Check** | Verifies new plants work with existing garden plants |
-| 📅 **Maintenance Schedule** | Generates watering and care schedules |
-| 💡 **Garden Tips** | Provides specific recommendations based on plant types |
+| 🌍 **Environmental Report**  | Calculates CO2 sequestered and water saved vs. traditional gardens            |
+| 💰 **Budget Management**     | Ensures total plant cost stays within budget                                  |
+| ✅ **Compatibility Check**   | Verifies new plants work with existing garden plants                          |
+| 📅 **Maintenance Schedule**  | Generates watering and care schedules                                         |
+| 💡 **Garden Tips**           | Provides specific recommendations based on plant types                        |
 
 ### Input Parameters
 
@@ -144,12 +144,12 @@ mindmap
 
 *Main input form with garden parameters and plant type selection*
 
-| Component | Description |
-|-----------|-------------|
-| Text Fields | Garden size, zip code, budget |
-| Dropdowns | Sun exposure, maintenance level |
+| Component     | Description                       |
+| ------------- | --------------------------------- |
+| Text Fields   | Garden size, zip code, budget     |
+| Dropdowns     | Sun exposure, maintenance level   |
 | Checkbox List | Existing plant types (15 options) |
-| Submit Button | Generate recommendations |
+| Submit Button | Generate recommendations          |
 
 ### Input Validation
 
@@ -225,12 +225,12 @@ mindmap
 
 <p align="center">
 
-| Component | Technology |
-|-----------|------------|
-| **Language** | ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white) |
-| **UI Framework** | ![JavaFX](https://img.shields.io/badge/JavaFX-007396?style=flat&logo=java&logoColor=white) |
-| **IDE** | ![IntelliJ](https://img.shields.io/badge/IntelliJ_IDEA-000000?style=flat&logo=intellij-idea&logoColor=white) |
-| **Data Storage** | CSV File |
+| Component        | Technology                                                                                                   |
+| ---------------- | ------------------------------------------------------------------------------------------------------------ |
+| **Language**     | ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white)                    |
+| **UI Framework** | ![JavaFX](https://img.shields.io/badge/JavaFX-007396?style=flat&logo=java&logoColor=white)                   |
+| **IDE**          | ![IntelliJ](https://img.shields.io/badge/IntelliJ_IDEA-000000?style=flat&logo=intellij-idea&logoColor=white) |
+| **Data Storage** | CSV File                                                                                                     |
 
 </p>
 
@@ -272,6 +272,7 @@ classDiagram
         -int budget
         -int maintenanceLevel
         -ObservableList~String~ existingPlantTypes
+        +ArrayList<Plant> plantsToFilter = readPlantsFromCsvFile("/path/to/Product/Plants.csv"); // read plants from CSV file. Replace this path with your own path
         +ArrayList~Plant~ newPlants
         +selectPlants() void
         +isCompatibleWith(plant, existing, filtered) boolean
@@ -418,7 +419,7 @@ graph TD
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/RohanMuppa/GreenGarden.git
+git clone https://github.com/[Username]/GreenGarden.git
 cd GreenGarden
 
 # 2. Set up JavaFX (if needed)
@@ -523,16 +524,16 @@ sequenceDiagram
 
 All IB IA success criteria were met:
 
-| # | Criteria | Status |
-|---|----------|--------|
-| 1 | Handle multiple inputs (maintenance, sun, budget, zip) | ✅ |
-| 2 | Generate plants for each garden | ✅ |
-| 3 | Recommend at least 1 native plant | ✅ |
-| 4 | Generate environmental report (CO2, water) | ✅ |
-| 5 | Recommend tips based on plant needs | ✅ |
-| 6 | Predict 10%+ water reduction | ✅ |
-| 7 | Provide watering schedule | ✅ |
-| 8 | Total cost under budget | ✅ |
+| #   | Criteria                                               | Status |
+| --- | ------------------------------------------------------ | ------ |
+| 1   | Handle multiple inputs (maintenance, sun, budget, zip) | ✅      |
+| 2   | Generate plants for each garden                        | ✅      |
+| 3   | Recommend at least 1 native plant                      | ✅      |
+| 4   | Generate environmental report (CO2, water)             | ✅      |
+| 5   | Recommend tips based on plant needs                    | ✅      |
+| 6   | Predict 10%+ water reduction                           | ✅      |
+| 7   | Provide watering schedule                              | ✅      |
+| 8   | Total cost under budget                                | ✅      |
 
 > *"I believe that the application predicted about 15% reduction in water usage"* — Client Feedback
 
@@ -540,14 +541,14 @@ All IB IA success criteria were met:
 
 ## Documentation
 
-| Document | Description | View |
-|----------|-------------|------|
-| **Criterion A** | Planning, problem definition, success criteria | [PDF](Documentation/Crit_%20A_Planning.pdf) |
-| **Criterion B** | Design, flowcharts, UML, test plans | [PDF](Documentation/Crit_B_Design.pdf) |
-| **Record of Tasks** | 57 documented development tasks | [PDF](Documentation/Crit_B_Record_Of_Tasks.pdf) |
-| **Criterion C** | Development, code explanations | [PDF](Documentation/Crit_C_Development.pdf) |
-| **Criterion E** | Evaluation, client feedback | [PDF](Documentation/Crit_E_Evaluation.pdf) |
-| **Appendix** | Supporting materials | [PDF](Documentation/Appendix.pdf) |
+| Document            | Description                                    | View                                            |
+| ------------------- | ---------------------------------------------- | ----------------------------------------------- |
+| **Criterion A**     | Planning, problem definition, success criteria | [PDF](Documentation/Crit_%20A_Planning.pdf)     |
+| **Criterion B**     | Design, flowcharts, UML, test plans            | [PDF](Documentation/Crit_B_Design.pdf)          |
+| **Record of Tasks** | 57 documented development tasks                | [PDF](Documentation/Crit_B_Record_Of_Tasks.pdf) |
+| **Criterion C**     | Development, code explanations                 | [PDF](Documentation/Crit_C_Development.pdf)     |
+| **Criterion E**     | Evaluation, client feedback                    | [PDF](Documentation/Crit_E_Evaluation.pdf)      |
+| **Appendix**        | Supporting materials                           | [PDF](Documentation/Appendix.pdf)               |
 
 ---
 
@@ -587,23 +588,23 @@ Garden Size Factor:
 
 ### CSV Schema
 
-| Column | Type | Description |
-|--------|------|-------------|
-| ID | int | Unique identifier |
-| Name | String | Plant name |
-| SunNeeded | int | Sun requirement (1-4) |
-| WaterNeeded | int | Water demand (1-3) |
-| Cost | double | Price in USD |
-| Zipcode | int | Native region |
-| Type | String | Plant category |
+| Column      | Type   | Description           |
+| ----------- | ------ | --------------------- |
+| ID          | int    | Unique identifier     |
+| Name        | String | Plant name            |
+| SunNeeded   | int    | Sun requirement (1-4) |
+| WaterNeeded | int    | Water demand (1-3)    |
+| Cost        | double | Price in USD          |
+| Zipcode     | int    | Native region         |
+| Type        | String | Plant category        |
 
 ---
 
 ## Acknowledgments
 
-- **Latha Muppa** — Client, requirements and feedback
-- **Peter Donaldson** — Technical advisor
-- **Ms. Nishiwaki** — IB Computer Science instructor
+- **[Client Name]** — Client, requirements and feedback
+- **[Advisor Name]** — Technical advisor
+- **[Instructor Name]** — IB Computer Science instructor
 
 ---
 
